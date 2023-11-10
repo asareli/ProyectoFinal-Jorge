@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Bookish Wisdoms</title>
+</head>
+<body>
+    <header class="navbar-header">
+        <section>
+            <nav class="navbar-header-flexbox">
+                <div class="navbar-header-nav-div">
+                    <button class="navbar-header-nav-div1-button1">
+                        <a href="navbar-header-nav-div1-button1-home">Home</a>
+                    </button>
+                </div>
+                <div class="navbar-header-nav-div">
+                    <button class="navbar-header-nav-div2-button2">
+                        <a href="navbar-header-nav-div2-button2-quotes">Quotes</a>
+                    </button>
+                </div>
+                <div class="navbar-header-nav-div">
+                    <button class="navbar-header-nav-div3-button3">
+                        <a href="navbar-header-nav-div3-button3-genres">Genres</a>
+                    </button>
+                </div>
+                <div class="navbar-header-nav-div">
+                    <button class="navbar-header-nav-div4-button4">
+                        <a href="navbar-header-nav-div4-button4-recommendationOfTheDay">Recommendation of the Day</a>
+                    </button>
+                </div>
+                <div class="navbar-header-nav-div-logo">
+                    <img class="logo-bookish-wisdoms" src="./img/bookish-wisdoms-logo.png" alt="bookishwisdoms-logo">
+                </div>
+            </nav>
+        </section>
+    </header>
+    <section>
+        <h1>Bookish Wisdoms</h1>
+        <b>Exploring the Depths of Books with Literary Magic</b>
+    </section>
+    <section>
+        <div>
+            <h3>What are you looking for?</h3>
+            <b>For example: "romance, horror, thriller..."</b>
+            <form action="/buscar" method="get">
+                <input type="text" id="busqueda" name="q" placeholder="Enter your search..." required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+    <script src="./js/index.js"></script>
+    <!-- buscador java-->
+</body>
+</html>
