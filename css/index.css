@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.primary-decorative{
+    font-family: 'Purple Purse';
+}
+.secondary-decorative{
+    font-family: 'Qwitcher Gryphen';
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #CAC8B9;
+}
+.body-wrapper-nav{
+    margin: 0;
+    padding: 0;
+    background-color: #777c68;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+.body-wrapper-nav-list{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.button-cart{
+    text-decoration: none;
+}
+.body-wrapper{
+    display: flex;
+    flex-direction: row;
+    background-color: #CAC8B9;
+}
+.body-wrapper-header-logo{
+    max-width: 100%;
+    max-height: 100%;
+    width: 75px;
+    height: 75px;
+}
+.body-wrapper-nav-list{
+    display: flex;
+    flex-direction: row;
+}
