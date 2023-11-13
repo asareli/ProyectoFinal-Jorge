@@ -603,7 +603,7 @@ const booksArray = [
 
 const containerBooks = document.querySelector("#books-container");
 
-function loadBooks() {
+function loadBooks(books) {
     books.forEach(book => {
         const div = document.createElement("div");
         div.classList.add("book");
