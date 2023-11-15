@@ -8,33 +8,73 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
-<body class="body">
-    <div class="body-wrapper">
-        <nav class="body-wrapper-nav">
-            <header class="body-wrapper-header">
-                <img src="./img/bookish-wisdoms-logo.png" alt="logo-bw" class="body-wrapper-header-logo">
-                <h1 class="primary-decorative">Bookish</h1>
-                <h2 class="secondary-decorative">Wisdoms</h2>
-            </header>
-            <ul class="body-wrapper-nav-list">
-                <li class="body-wrapper-nav-list-items"><button class="button-category-active"> All Genres</button></li>
-                <li class="body-wrapper-nav-list-items"><button class="button-category-active"> Horror</button></li>
-                <li class="body-wrapper-nav-list-items"><button class="button-category-active"> Romance</button></li>
-                <li class="body-wrapper-nav-list-items"><button class="button-category-active"> Thriller</button></li>
-                <li class="body-wrapper-nav-list-items"><button class="button-category-active"> Fantasy</button></li>
-                <li class="body-wrapper-nav-list-items"><button class="button-category-active"> Fiction</button></li>
-                <li class="body-wrapper-nav-list-items"><button class="button-category-active"> Science Fiction</button></li>
-                <li class="body-wrapper-nav-list-items"><a class="button-cart" href="./cart.html"> Cart <span class="cart-number">0</span></a></li>
+<body>
+    <section id="header">
+        <a href="#"><img src="./img/W.png" alt="page-logo" class="logo-page"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="recommendationoftheday.html">Recommendation of the day</a></li>
+                <li><a href="cart.html"><i class="bi bi-bag-heart"></i></a></li>
             </ul>
-        </nav>
-        <main>
-            <h2 class="main-title">All Genres</h2>
-            <div id="books-container" class="books-container"></div>
-        </main>
-        <footer>
-            <p class="text-footer">® 2023 Bookish Wisdoms</p>
-        </footer>
-    </div>
-    <script src="./js/index.js"></script>
+        </div>
+    </section>
+    <section id="hero">
+        <h1><span class="bookish">Bookish </span><span class="wisdoms">Wisdoms</span></h1>
+        <h2>Super value deals</h2>
+        <h2>On all books</h2>
+        <p>Save more with coupons $ up to 70% off!</p>
+        <button>Shop Now</button>
+    </section>
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="./img/icons web/Free-Shipping.png" alt="" class="fe-box-images">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="./img/icons web/online-order.png" alt="" class="fe-box-images">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="./img/icons web/happy-sell.png" alt="" class="fe-box-images">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="./img/icons web/promotions.png" alt="" class="fe-box-images">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="./img/icons web/save-money.png" alt="" class="fe-box-images">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="./img/icons web/help-support.png" alt="" class="fe-box-images">
+            <h6>Help Support</h6>
+        </div>
+    </section>
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get E-mail updates about our latest shop arrivals and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your e-mail address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <img src="./img/W.png" alt="" class="logo-page">
+            <h4>Social Media</h4>
+            <img src="./img/icons web/facebook.png" alt="" class="social-media">
+            <img src="./img/icons web/instagram.png" alt="" class="social-media">
+            <img src="./img/icons web/linkedin.png" alt="" class="social-media">
+            <img src="./img/icons web/tik-tok.png" alt="" class="social-media">
+            <img src="./img/icons web/twitter.png" alt="" class="social-media">
+        </div>
+    </footer>
+    <!-- <script src="./js/index.js"></script> -->
 </body>
 </html>
