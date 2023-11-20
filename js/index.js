@@ -61,20 +61,20 @@ const books = [
     { id: 60, title: "The Girl on the Train", author: "Paula Hawkins", genre: "Psychological Thriller", image: "../img/thriller/TheGirlontheTrain.png", review: "A gripping psychological thriller centered around the lives of three women and the events that unfold during their daily commutes.", price: "$14.95" },
 ]
 
-console.log("Search by genre...")
-function searchByGenre() {
-    let userInput = prompt("Enter a genre (horror, romance, thriller, fantasy, fiction, science fiction")
+const searchTerm = prompt('Enter a genre to search: ');
 
-    if (!userInput) {
-        alert("Please enter valid genre");
-        return;
-    }
+const lowerCaseSearchTerm = searchTerm.toLowerCase();
+const matchingBooks = books.filter(book => book.genre.toLowerCase().includes(lowerCaseSearchTerm));
 
-    userInput = userInput.toLowerCase();
-    const matchingBooks = books.filter(book => book.genre.toLowerCase() === userInput);
-    if (matchingBooks.length === 0) {
-        alert("No books found for the entered genre.");
-    } else {
-        alert("Matching Books:\n" + matchingBooks.map(book => book.title).join("\n"));
-    }
+if (matchingBooks.length > 0) {
+    console.log(`Libros que coinciden con el término "${searchTerm}":`);
+    matchingBooks.forEach(book => {
+        alert(`ID: ${book.id} 
+        Title: ${book.title} 
+        Author: ${book.author} 
+        Review: ${book.review} 
+        Price: ${book.price}`);
+    });
+} else {
+    alert(`No se encontraron libros que coincidan con el término "${searchTerm}".`);
 }
