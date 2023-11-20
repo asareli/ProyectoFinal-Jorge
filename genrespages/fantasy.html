@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+</head>
+
+<body>
+    <h1>Bookstore</h1>
+
+    <div id="bookContainer"></div>
+
+    <script>
+        const books = [
+            {
+                title: "The Great Gatsby",
+                author: "F. Scott Fitzgerald",
+                price: 15.99,
+                imgSrc: "great_gatsby.jpg",
+            },
+            {
+                title: "To Kill a Mockingbird",
+                author: "Harper Lee",
+                price: 12.49,
+                imgSrc: "mockingbird.jpg",
+            },
+            {
+                title: "1984",
+                author: "George Orwell",
+                price: 10.99,
+                imgSrc: "1984.jpg",
+            },
+            // Add more book objects as needed
+        ];
+
+        // Get the book container element
+        const bookContainer = document.getElementById("bookContainer");
+
+        // Loop through the books array and create HTML elements
+        books.forEach(book => {
+            const bookElement = document.createElement("div");
+            bookElement.innerHTML = `
+        <h2>${book.title}</h2>
+        <p>Author: ${book.author}</p>
+        <p>Price: $${book.price.toFixed(2)}</p>
+        <img src="${book.imgSrc}" alt="${book.title} cover">
+        <hr>
+    `;
+            bookContainer.appendChild(bookElement);
+        });
+    </script>
+</body>
+
+</html>

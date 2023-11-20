@@ -11,11 +11,22 @@
 <body>
     <section id="header">
         <a href="#"><img src="./img/W.png" alt="page-logo" class="logo-page"></a>
-        <div>
-            <ul id="navbar">
+        <div class="menu-bar">
+            <ul id="navbar" class="menu-bar-principal">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="genres.html">Genres</a></li>
+                <li class="menu-bar-principal-genres"><a href="genres.html">Genres</a>
+                    <div class="menu-bar-principal-genres-submenu">
+                        <ul>
+                            <li><a href="#">Fantasy</a></li>
+                            <li><a href="#">Fiction</a></li>
+                            <li><a href="#">Horror</a></li>
+                            <li><a href="#">Romance</a></li>
+                            <li><a href="#">Science Fiction</a></li>
+                            <li><a href="#">Thriller</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="recommendationoftheday.html">Recommendation of the day</a></li>
                 <li><a href="cart.html"><i class="bi bi-bag-heart"></i></a></li>
             </ul>
@@ -75,6 +86,6 @@
             <img src="./img/icons web/twitter.png" alt="" class="social-media">
         </div>
     </footer>
-    <!-- <script src="./js/index.js"></script> -->
+    <script src="./js/index.js"></script>
 </body>
 </html>

@@ -101,7 +101,26 @@ button.normal{
     width: 70px;
     height: 70px;
 }
-
+.sub-menu{
+    display: none;
+}
+/* .menu-bar .menu-bar-principal .menu-bar-principal-genres:hover .menu-bar-principal-genres-submenu{
+    display: block;
+    position: absolute;
+    background-color: #777c68;
+    margin-top: 15px;
+    margin-left: -15px;
+} */
+.menu-bar-principal-genres-submenu{
+    display: none;
+    position: absolute;
+    background-color: #777c68;
+    margin-top: 15px;
+    margin-left: 0;
+}
+.menu-bar-principal-genres:hover .menu-bar-principal-genres-submenu {
+    display: block;
+}
 #navbar{
     display: flex;
     align-items: center;

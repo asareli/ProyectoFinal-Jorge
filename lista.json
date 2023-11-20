@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "title": "The Shining",
         "genre": "Horror",
         "author": "Stephen King",
@@ -407,7 +408,7 @@
     },
     {
         "title": "Before I Go to Sleep",
-        "genre": "Psychological Thriller",
+        "genre": "S.J. Watson",
         "author": "S.J. Watson",
         "review": "A psychological thriller about a woman with amnesia who wakes up each day with no memory, piecing together the truth about her past.",
         "price": "$22.99"
