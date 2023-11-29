@@ -60,7 +60,7 @@ const books = [
     { id: 59, title: "Before I Go to Sleep", author: "S.J. Watson", genre: "S.J. Watson", image: "./img/thriller/BeforeIGotoSleep.jpg", review: "A psychological thriller about a woman with amnesia who wakes up each day with no memory, piecing together the truth about her past.", price: "$22.99" },
     { id: 60, title: "The Girl on the Train", author: "Paula Hawkins", genre: "Psychological Thriller", image: "./img/thriller/TheGirlontheTrain.png", review: "A gripping psychological thriller centered around the lives of three women and the events that unfold during their daily commutes.", price: "$14.95" },
 ]
-
+/* funcion para buscar los libros en el array */
 function searchBooks() {
     let searchTerm = document.getElementById("searchInput").value.toLowerCase();
     searchByGenre(searchTerm);
@@ -88,7 +88,7 @@ function searchByGenre(searchTerm) {
         alert(`There are no matches with that word..."${searchTerm}".`);
     }
 }
-
+/* funcion para generar un libro aleatorio en la parte recommendation of the day (no pude solucionar el problema de las imágenes aún. espero comentarios al respecto :) ) */
 function getRandomBookById() {
     const randomIndex = Math.floor(Math.random() * books.length);
     return books[randomIndex];
