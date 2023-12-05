@@ -15,8 +15,7 @@
             <ul id="navbar">
                 <li><a href="./index.html">Home</a></li>
                 <li><a class="active" href="shop.html">Shop</a></li>
-                <li><a href="./genres.html">Genres</a></li>
-                <li><a href="./html/recommendationoftheday.html">Recommendation of the day</a></li>
+                <li><a href="./recommendationoftheday.html">Recommendation of the day</a></li>
                 <li><a href="./cart.html"><i class="bi bi-bag-heart"></i></a></li>
             </ul>
         </div>
@@ -159,15 +158,15 @@
             </div>
         </div>
     </section>
-    <section id="pagination" class="section-p1">
+    <!-- <section id="pagination" class="section-p1">
         <a href="#">1</a>
         <a href="#">2</a>
         <a href="#"><i class="bi bi-arrow-right-circle"></i></a>
-    </section>
+    </section> -->
     <section id="search" class="section-p1">
         <p>Search book by genre: "fiction, fantasy, romance, science fiction, thriller"</p>
         <input type="text" id="searchInput" placeholder="Enter your search...">
-        <button class="normal" onclick="searchBooks()">Search</button>
+        <button id="search-button" class="normal">Search</button>
     </section>
     <section class="section-p1">
         <div id="searchResults"></div>
@@ -175,42 +174,17 @@
     <section class="genre-section">
         <h2 class="genre-invite">Check Our Genres!</h2>
         <div class="genre-container">
-            <div class="genres">
-                <img src="./img/genres/fantasy.jpg" alt="">
-                <button href="./html/fantasy.html" class="normal">Fantasy</button>
-            </div>
-            <div class="genres">
-                <img src="./img/genres/fiction.jpg" alt="">
-                <div class="des">
-                    <button href="./html/fiction.html" class="normal">Fiction</button>
-                </div>
-            </div>
-            <div class="genres">
-                <img src="./img/genres/horror.jpg" alt="">
-                <div class="des">
-                    <button href="./html/horror.html" class="normal">Horror</button>
-                </div>
-            </div>
-            <div class="genres">
-                <img src="./img/genres/romance.jpg" alt="">
-                <div class="des">
-                    <button href="./html/romance.html" class="normal">Romance</button>
-                </div>
-            </div>
-            <div class="genres">
-                <img src="./img/genres/science-fiction.jpg" alt="">
-                <div class="des">
-                    <button href="./html/sciencefiction.html" class="normal">Science Fiction</button>
-                </div>
-            </div>
-            <div class="genres">
-                <img src="./img/genres/thriller.jpg" alt="">
-                <div class="des">
-                    <button href="./html/thriller.html" class="normal">Thriller</button>
-                </div>
-            </div>
+            <button id="fantasy" class="normal">Fantasy</button>
+            <button id="fiction" class="normal">Fiction</button>
+            <button id="horror" class="normal">Horror</button>
+            <button id="romance" class="normal">Romance</button>
+            <button id="science-fiction" class="normal">Science Fiction</button>
+            <button id="thriller" class="normal">Thriller</button>
         </div>
     </section>
+    <div id="books-container">
+        
+    </div>
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
             <h4>Sign Up for Newsletters</h4>
@@ -262,6 +236,6 @@
             <img src="./img/icons web/visa.png" alt="">
         </div>
     </footer>
-    <script src="./js/index.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
