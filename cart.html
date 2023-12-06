@@ -15,69 +15,79 @@
             <ul id="navbar" class="menu-bar-principal">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
+                <li><a href="./allproducts.html">All Books</a></li>
                 <li><a href="recommendationoftheday.html">Recommendation of the day</a></li>
-                <li><a class="active" href="cart.html"><i class="bi bi-bag-heart"></i></a></li>
+                <li><a class="active" href="cart.html"><i class="bi bi-bag-heart"></i><span class="numerito">0</span></a></li>
             </ul>
         </div>
     </section>
-    <section id="cart" class="section-p1">
-        <table width="100%">
-            <thead>
-                <tr>
-                    <td>Remove</td>
-                    <td>Image</td>
-                    <td>Product</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Subtotal</td>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- <tr>
-                    <td><a href="#"><i class="bi bi-trash"></i></a></i></td>
-                    <td><img src="./img/featured books/americanah.jpg" alt=""></td>
-                    <td>"Americanah" by Chimamanda Ngozi Adichie</td>
-                    <td>$40</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$40</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="bi bi-trash"></i></a></i></td>
-                    <td><img src="./img/featured books/charlottebronte.jpg" alt=""></td>
-                    <td>"Charlotte Brontë" by Jane Eyre</td>
-                    <td>$40</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$40</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="bi bi-trash"></i></a></i></td>
-                    <td><img src="./img/featured books/frankenstein.jpg" alt=""></td>
-                    <td>"Frankenstein" by Mary Shelley</td>
-                    <td>$44</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$44</td>
-                </tr> -->
-            </tbody>
-        </table>
-    </section>
-    <section id="cart-add" class="section-p1">
-        <div id="subtotal">
-            <h3>Cart Total</h3>
-            <table>
-                <tr>
-                    <td>Cart Subtotal</td>
-                    <!-- <td>$124</td> -->
-                </tr>
-                <tr>
-                    <td>Shipping</td>
-                    <!-- <td>Free</td> -->
-                </tr>
-                <tr>
-                    <td><strong>Total</strong></td>
-                    <!-- <td><strong>$124</strong></td> -->
-                </tr>
-            </table>
-            <button class="normal">Proceed to checkout</button>
+    <section class="genre-section">
+        <h2 class="genre-invite titulo-principal">Shopping Cart</h2>
+        <div class="contenedor-carrito">
+            <p class="carrito-vacio disabled">Your cart is empty. <i class="bi bi-emoji-frown"></i></p>
+            <div class="carrito-productos disabled">
+                <div class="carrito-producto">
+                    <img class="carrito-producto-imagen" src="./img/fantasy/AGameofThrones.jpg" alt="">
+                    <div class="carrito-producto-titulo">
+                        <small>Title</small>
+                        <h3>Book 01</h3>
+                    </div>
+                    <div class="carrito-producto-cantidad">
+                        <small>Amount</small>
+                        <p>1</p>
+                    </div>
+                    <div class="carrito-producto-precio">
+                        <small>Price</small>
+                        <p>$00.00</p>
+                    </div>
+                    <div class="carrito-producto-subtotal">
+                        <small>Subtotal</small>
+                        <p>$00.00</p>
+                    </div>
+                    <button class="normal"><i class="bi bi-trash"></i></button>
+                </div>
+                <div class="carrito-producto">
+                    <img class="carrito-producto-imagen" src="./img/fantasy/HarryPotterandthePhilosopher'sStone.jpg" alt="">
+                    <div class="carrito-producto-titulo">
+                        <small>Title</small>
+                        <h3>Book 01</h3>
+                    </div>
+                    <div class="carrito-producto-cantidad">
+                        <small>Amount</small>
+                        <p>1</p>
+                    </div>
+                    <div class="carrito-producto-precio">
+                        <small>Price</small>
+                        <p>$00.00</p>
+                    </div>
+                    <div class="carrito-producto-subtotal">
+                        <small>Subtotal</small>
+                        <p>$00.00</p>
+                    </div>
+                    <button class="normal"><i class="bi bi-trash"></i></button>
+                </div>
+            </div>
+            <div class="carrito-acciones disabled">
+                <div class="carrito-acciones-izquierda">
+                    <button class="carrito-acciones-vaciar">Empty Cart</button>
+                </div>
+                <div class="carrito-acciones-derecha">
+                    <div class="carrito-acciones-total">
+                        <p>Total:</p>
+                        <p id="total">$00.00</p>
+                    </div>
+                    <button class="carrito-acciones-comprar">Buy Now</button>
+                </div>
+            </div>
+            <p class="carrito-comprado disabled">Thank you for your purchase!! <i class="bi bi-stars"></i></p>
+        </div>
+        <div class="genre-container">
+            <button id="fantasy" class="boton-categoria normal">Fantasy</button>
+            <button id="fiction" class="boton-categoria normal">Fiction</button>
+            <button id="horror" class="boton-categoria normal">Horror</button>
+            <button id="romance" class="boton-categoria normal">Romance</button>
+            <button id="science-fiction" class="boton-categoria normal">Science Fiction</button>
+            <button id="thriller" class="boton-categoria normal">Thriller</button>
         </div>
     </section>
     <section id="product1" class="section-p1">

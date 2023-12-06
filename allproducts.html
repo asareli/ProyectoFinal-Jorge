@@ -11,47 +11,59 @@
 <body>
     <section id="header">
         <a href="#"><img src="./img/W.png" alt="page-logo" class="logo-page"></a>
-        <div class="menu-bar">
-            <ul id="navbar" class="menu-bar-principal">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="./shop.html">Shop</a></li>
-                <li><a href="./allproducts.html">All Books</a></li>
+        <div>
+            <ul id="navbar">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a class="active" href="./allproducts.html">All Books</a></li>
                 <li><a href="./recommendationoftheday.html">Recommendation of the day</a></li>
-                <li><a href="./cart.html"><i class="bi bi-bag-heart"></i></a></li>
+                <li><a class="boton-carrito" href="./cart.html"><i class="bi bi-bag-heart"></i></a></li>
             </ul>
         </div>
     </section>
-    <section id="hero">
-        <h1><span class="bookish">Bookish </span><span class="wisdoms">Wisdoms</span></h1>
-        <h2>Super value deals</h2>
-        <h2>On all books</h2>
-        <p>Save more with coupons $ up to 70% off!</p>
-        <button>Shop Now</button>
-    </section>
-    <section id="feature" class="section-p1">
-        <div class="fe-box">
-            <img src="./img/icons web/Free-Shipping.png" alt="" class="fe-box-images">
-            <h6>Free Shipping</h6>
+    <section class="genre-section">
+        <h2 class="genre-invite titulo-principal">All Our Books!</h2>
+        <div id="books-container" class="contenedor-productos">
+            <div class="producto">
+                <img class="producto-imagen" src="./img/fantasy/AGameofThrones.jpg" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Book 01</h3>
+                    <p class="producto-precio">$00.00</p>
+                    <button class="producto-agregar normal">Add</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img class="producto-imagen" src="./img/fantasy/GoodOmens.jpg" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Book 01</h3>
+                    <p class="producto-precio">$00.00</p>
+                    <button class="producto-agregar normal">Add</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img class="producto-imagen" src="./img/fantasy/HarryPotterandthePhilosopher'sStone.jpg" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Book 01</h3>
+                    <p class="producto-precio">$00.00</p>
+                    <button class="producto-agregar normal">Add</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img class="producto-imagen" src="./img/fantasy/MistbornTheFinalEmpire.jpg" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Book 01</h3>
+                    <p class="producto-precio">$00.00</p>
+                    <button class="producto-agregar normal">Add</button>
+                </div>
+            </div>
         </div>
-        <div class="fe-box">
-            <img src="./img/icons web/online-order.png" alt="" class="fe-box-images">
-            <h6>Online Order</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/icons web/happy-sell.png" alt="" class="fe-box-images">
-            <h6>Happy Sell</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/icons web/promotions.png" alt="" class="fe-box-images">
-            <h6>Promotions</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/icons web/save-money.png" alt="" class="fe-box-images">
-            <h6>Save Money</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/icons web/help-support.png" alt="" class="fe-box-images">
-            <h6>Help Support</h6>
+        <div class="genre-container">
+            <button id="fantasy" class="boton-menu normal">Fantasy</button>
+            <button id="fiction" class="boton-menu normal">Fiction</button>
+            <button id="horror" class="boton-menu normal">Horror</button>
+            <button id="romance" class="boton-menu normal">Romance</button>
+            <button id="science-fiction" class="boton-menu normal">Science Fiction</button>
+            <button id="thriller" class="boton-menu normal">Thriller</button>
         </div>
     </section>
     <section id="product1" class="section-p1">
@@ -72,7 +84,7 @@
                     </div>
                     <h4>$40</h4>
                 </div>
-                <a href="#"><i class="bi bi-bag-heart cart"></i></a>
+                <button class="bi bi-bag-heart cart"></button>
             </div>
             <div class="pro">
                 <img src="./img/featured books/annakarenina.jpg" alt="">
@@ -88,7 +100,7 @@
                     </div>
                     <h4>$49</h4>
                 </div>
-                <a href="#"><i class="bi bi-bag-heart cart"></i></a>
+                <button class="bi bi-bag-heart cart"></button>
             </div>
             <div class="pro">
                 <img src="./img/featured books/frankenstein.jpg" alt="">
@@ -104,7 +116,7 @@
                     </div>
                     <h4>$44</h4>
                 </div>
-                <a href="#"><i class="bi bi-bag-heart cart"></i></a>
+                <button class="bi bi-bag-heart cart"></button>
             </div>
             <div class="pro">
                 <img src="./img/featured books/littlewoman.jpg" alt="">
@@ -120,7 +132,7 @@
                     </div>
                     <h4>$46</h4>
                 </div>
-                <a href="#"><i class="bi bi-bag-heart cart"></i></a>
+                <button class="bi bi-bag-heart cart"></button>
             </div>
             <div class="pro">
                 <img src="./img/featured books/americanah.jpg" alt="">
@@ -136,7 +148,7 @@
                     </div>
                     <h4>$40</h4>
                 </div>
-                <a href="#"><i class="bi bi-bag-heart cart"></i></a>
+                <button class="bi bi-bag-heart cart"></button>
             </div>
             <div class="pro">
                 <img src="./img/featured books/madammebovary.jpg" alt="">
@@ -152,7 +164,7 @@
                     </div>
                     <h4>$50</h4>
                 </div>
-                <a href="#"><i class="bi bi-bag-heart cart"></i></a>
+                <button class="bi bi-bag-heart cart"></button>
             </div>
             <div class="pro">
                 <img src="./img/featured books/thebookthief.jpg" alt="">
@@ -168,7 +180,7 @@
                     </div>
                     <h4>$47</h4>
                 </div>
-                <a href="#"><i class="bi bi-bag-heart cart"></i></a>
+                <button class="bi bi-bag-heart cart"></button>
             </div>
             <div class="pro">
                 <img src="./img/featured books/anabundanceofkatherines.jpg" alt="">
@@ -184,14 +196,17 @@
                     </div>
                     <h4>$35</h4>
                 </div>
-                <a href="#"><i class="bi bi-bag-heart cart"></i></a>
+                <button class="bi bi-bag-heart cart"></button>
             </div>
         </div>
     </section>
-    <section id="banner" class="section-m1">
-        <h4>Special Offers!</h4>
-        <h2>Up to <span>30% Off</span> on the Recommendation of the Day</h2>
-        <button class="normal">Explore More</button>
+    <section id="search" class="section-p1">
+        <p>Search book by genre: "fiction, fantasy, romance, science fiction, thriller"</p>
+        <input type="text" id="searchInput" placeholder="Enter your search...">
+        <button id="search-button" class="normal">Search</button>
+    </section>
+    <section class="section-p1">
+        <div id="searchResults"></div>
     </section>
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
@@ -244,6 +259,6 @@
             <img src="./img/icons web/visa.png" alt="">
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
 </body>
 </html>

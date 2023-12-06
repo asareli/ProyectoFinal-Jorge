@@ -1,171 +1,603 @@
 const books = [
-    { id: 1, title: "The Shining", author: "Stephen King", genre: "Horror", image: "./img/horror/theshining.jpg", review: "A chilling tale of a family isolated in a haunted hotel during the winter. As supernatural forces take hold, the psychological horror unfolds.", price: "$19.99" },
-    { id: 2, title: "Dracula", author: "Bram Stoker", genre: "Horror", image: "./img/horror/dracula.jpg", review: "The classic novel that introduced Count Dracula, a vampire who terrorizes London. A tale of suspense, terror, and the battle between good and evil.", price: "$15.99" },
-    { id: 3, title: "Psycho", author: "Robert Bloch", genre: "Thriller", image: "./img/horror/psycho.jpg", review: "Norman Bates and his eerie motel take center stage in this psychological thriller, which inspired Alfred Hitchcock's iconic film.", price: "$14.95" },
-    { id: 4, title: "The Exorcist", author: "William Peter Blatty", genre: "Horror", image: "./img/horror/theexorcist.jpg", review: "A mother's desperate attempt to save her daughter from demonic possession becomes a harrowing battle between good and evil.", price: "$21.50" },
-    { id: 5, title: "Bird Box", author: "Josh Malerman", genre: "Horror", image: "./img/horror/birdbox.jpg", review: "In a world where mysterious creatures drive people to madness when seen, a mother and her children must navigate a blindfolded existence.", price: "$17.99" },
-    { id: 6, title: "The Haunting of Hill House", author: "Shirley Jackson", genre: "Horror", image: "./img/horror/thehauntingofhillhouse.jpg", review: "A group of people with paranormal experiences gather at the haunted Hill House, unleashing a series of unsettling events.", price: "$18.75" },
-    { id: 7, title: "American Psycho", author: "Bret Easton Ellis", genre: "Thriller", image: "./img/horror/AmericanPsycho.jpg", review: "A disturbing journey into the mind of Patrick Bateman, a wealthy and deranged New York City businessman with a taste for violence.", price: "$22.99" },
-    { id: 8, title: "It", author: "Stephen King", genre: "Horror", image: "./img/horror/it.png", review: "A group of friends confronts a malevolent entity that takes the form of Pennywise the Dancing Clown. A tale of childhood fears and the power of friendship.", price: "$20.00" },
-    { id: 9, title: "House of Leaves", author: "Mark Z. Danielewski", genre: "Horror", image: "./img/horror/houseofleaves.jpg", review: "A mind-bending narrative that explores a family's experience with a strange house, blending horror, mystery, and experimental storytelling.", price: "$24.95" },
-    { id: 10, title: "Mexican Gothic", author: "Silvia Moreno-Garcia", genre: "Horror", image: "./img/horror/mexicangothic.jpg", review: "In 1950s Mexico, a socialite confronts supernatural horrors in a decaying mansion, uncovering family secrets and facing ancient evils.", price: "$19.99" },
-    { id: 11, title: "Pride and Prejudice", author: "Jane Austen", genre: "Romance", image: "./img/romance/prideandprejudice.jpg", review: "A classic novel that explores the themes of love, class, and societal expectations through the spirited Elizabeth Bennet and the proud Mr. Darcy.", price: "$12.99" },
-    { id: 12, title: "Outlander", author: "Diana Gabaldon", genre: "Romance", image: "./img/romance/outlander.jpg", review: "A time-traveling love story that follows Claire Randall, a nurse from the 1940s, who finds herself in 18th-century Scotland, where she meets Jamie Fraser.", price: "$23.50" },
-    { id: 13, title: "The Notebook", author: "Nicholas Sparks", genre: "Romance", image: "./img/romance/thenotebook.jpg", review: "A heartwarming tale of Noah and Allie, two people from different social classes who fall in love during the summer but face challenges that test their commitment.", price: "$14.95" },
-    { id: 14, title: "Me Before You", author: "Jojo Moyes", genre: "Romance", image: "./img/romance/mebeforeyou.jpg", review: "A poignant love story between Louisa Clark, a young woman who becomes a caregiver, and Will Traynor, a quadriplegic man, exploring themes of life and choice.", price: "$16.99" },
-    { id: 15, title: "The Fault in Our Stars", author: "John Green", genre: "Romance", image: "./img/romance/thefaultinourstars.jpg", review: "A heartwarming and heartbreaking story of two teenagers, Hazel Grace Lancaster and Augustus Waters, who meet at a cancer support group and embark on a journey of love and loss.", price: "$13.50" },
-    { id: 16, title: "Gone with the Wind", author: "Margaret Mitchell", genre: "Romance", image: "./img/romance/gonewiththewind.jpg", review: "Set against the backdrop of the American Civil War and Reconstruction era, Scarlett O'Hara and Rhett Butler's tumultuous love story unfolds in the South.", price: "$19.95" },
-    { id: 17, title: "Eleanor Oliphant Is Completely Fine", author: "Gail Honeyman", genre: "Romance", image: "./img/romance/eleanoroliphantiscompletelyfine.jpg", review: "A quirky and heartwarming tale of Eleanor Oliphant, a socially awkward woman, and her unexpected journey towards self-discovery and love.", price: "$22.00" },
-    { id: 18, title: "Sense and Sensibility", author: "Jane Austen", genre: "Romance", image: "./img/romance/senseandsensibility.jpg", review: "A classic exploration of love and societal expectations, focusing on the contrasting personalities of the Dashwood sisters, Elinor and Marianne.", price: "$15.99" },
-    { id: 19, title: "The Hating Game", author: "Sally Thorne", genre: "Romance", image: "./img/romance/thehatinggame.jpg", review: "A delightful enemies-to-lovers office romance that follows Lucy Hutton and Joshua Templeman as they navigate workplace rivalry and unexpected attraction.", price: "$17.75" },
-    { id: 20, title: "To All the Boys I've Loved Before", author: "Jenny Han", genre: "Romance", image: "./img/romance/ToAlltheBoysI'veLovedBefore.jpg", review: "Lara Jean Covey's life takes a turn when her secret love letters are accidentally sent out, leading to unexpected romantic adventures and self-discovery.", price: "$14.99" },
-    { id: 21, title: "The Great Gatsby", author: "F. Scott Fitzgerald", genre: "Fiction", image: "./img/fiction/thegreatgatsby.webp", review: "A story of wealth, love, and tragedy set in the Roaring Twenties, capturing the essence of the American Dream.", price: "$18.99" },
-    { id: 22, title: "To Kill a Mockingbird", author: "Harper Lee", genre: "Fiction", image: "./img/fiction/tokillamockingbird.jpg", review: "Set in the American South, this novel addresses issues of racial injustice and moral growth through the eyes of a young girl.", price: "$15.50" },
-    { id: 23, title: "1984", author: "George Orwell", genre: "Fiction", image: "./img/fiction/1984.jpg", review: "A dystopian novel that explores the dangers of totalitarianism and the erosion of truth and freedom.", price: "$16.75" },
-    { id: 24, title: "Brave New World", author: "Aldous Huxley", genre: "Fiction", image: "./img/fiction/bravenewworld.jpg", review: "In a future society where people are engineered for specific roles, the novel explores the impact of advanced technology on human nature.", price: "$20.00" },
-    { id: 25, title: "One Hundred Years of Solitude", author: "Gabriel García Márquez", genre: "Fiction", image: "./img/fiction/OneHundredYearsofSolitude.jpg", review: "A multi-generational tale that blends magical elements with the reality of a small town, exploring the cyclical nature of history.", price: "$22.99" },
-    { id: 26, title: "The Catcher in the Rye", author: "J.D. Salinger", genre: "Fiction", image: "./img/fiction/TheCatcherintheRye.webp", review: "A classic novel that explores the struggles of adolescence and the search for identity.", price: "$14.95" },
-    { id: 27, title: "The Alchemist", author: "Paulo Coelho", genre: "Fiction", image: "./img/fiction/TheAlchemist.jpg", review: "Santiago's journey to discover his personal legend is a philosophical and allegorical tale about following one's dreams.", price: "$19.99" },
-    { id: 28, title: "Norwegian Wood", author: "Haruki Murakami", genre: "Fiction", image: "./img/fiction/NorwegianWood.jpg", review: "A nostalgic and coming-of-age novel that explores love, loss, and the impact of the past on the present.", price: "$17.50" },
-    { id: 29, title: "The Kite Runner", author: "Khaled Hosseini", genre: "Fiction", image: "./img/thriller/TheKiteRunner.jpg", review: "Set in Afghanistan, this novel explores the complex relationships between friends and family against the backdrop of a changing nation.", price: "$21.99" },
-    { id: 30, title: "The Road", author: "Cormac McCarthy", genre: "Fiction", image: "./img/fiction/TheRoad.jpg", review: "A father and son's journey through a post-apocalyptic world, exploring themes of survival, love, and the human condition.", price: "$23.00" },
-    { id: 31, title: "The Hobbit", author: "J.R.R. Tolkien", genre: "Fantasy", image: "./img/fantasy/TheHobbit.jpg", review: "The classic tale of Bilbo Baggins, a hobbit who embarks on an epic journey to reclaim treasure guarded by the dragon Smaug.", price: "$25.99" },
-    { id: 32, title: "Harry Potter and the Philosopher's Stone", author: "J.K. Rowling", genre: "Fantasy", image: "./img/fantasy/HarryPotterandthePhilosopher'sStone.jpg", review: "The start of the magical journey at Hogwarts School of Witchcraft and Wizardry as Harry Potter discovers his true identity and battles dark forces.", price: "$19.95" },
-    { id: 33, title: "The Name of the Wind", author: "Patrick Rothfuss", genre: "Fantasy", image: "./img/fantasy/TheNameoftheWind.jpg", review: "The autobiographical tale of Kvothe, a gifted musician and magician, as he recounts his life's adventures and the pursuit of knowledge.", price: "22.50" },
-    { id: 34, title: "Mistborn: The Final Empire", author: "Brandon Sanderson", genre: "Fantasy", image: "./img/fantasy/MistbornTheFinalEmpire.jpg", review: "In a world ruled by the immortal Lord Ruler, a street thief named Vin discovers her magical abilities and joins a rebellion to overthrow the empire.", price: "$24.99" },
-    { id: 35, title: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe", author: "C.S. Lewis", genre: "Fantasy", image: "./img/fantasy/TheChroniclesOfNarniaThe LiontheWitchandtheWardrobe.jpg", review: "The enchanting story of the Pevensie siblings who discover the magical land of Narnia and join the fight against the White Witch.", price: "$18.50" },
-    { id: 36, title: "A Game of Thrones", author: "George R.R. Martin", genre: "Fantasy", image: "./img/fantasy/AGameofThrones.jpg", review: "The first book in the 'A Song of Ice and Fire' series, where noble families vie for control of the Iron Throne in the fictional land of Westeros.", price: "$27.99" },
-    { id: 37, title: "The Way of Kings", author: "Brandon Sanderson", genre: "Fantasy", image: "./img/fantasy/TheWayofKings.jpg", review: "In the world of Roshar, where magical storms shape the land, different characters embark on epic journeys that will change the fate of their world.", price: "$30.00" },
-    { id: 38, title: "The Magicians", author: "Lev Grossman", genre: "Fantasy", image: "./img/fantasy/TheMagicians.jpg", review: "Quentin Coldwater discovers that the magical land he read about in childhood books is real, leading him to a magical academy and an adventure beyond imagination.", price: "$21.95" },
-    { id: 39, title: "Good Omens", author: "Neil Gaiman, Terry Pratchett", genre: "Fantasy", image: "./img/fantasy/GoodOmens.jpg", review: "A humorous fantasy novel that follows an angel and a demon as they team up to prevent the apocalypse and save the world.", price: "$25.99" },
-    { id: 40, title: "The Fellowship of the Ring", author: "J.R.R. Tolkien", genre: "Fantasy", image: "./img/thriller/TheFellowshipoftheRing.gif", review: "The first book in 'The Lord of the Rings' trilogy, as Frodo Baggins and his companions set out to destroy the One Ring and save Middle-earth.", price: "$28.50" },
-    { id: 41, title: "Dune", author: "Frank Herbert", genre: "Science Fiction", image: "./img/science fiction/Dune.jpg", review: "A sprawling epic set in a distant future where noble families control planets and a young hero, Paul Atreides, rises to power.", price: "$32.99" },
-    { id: 42, title: "Neuromancer", author: "William Gibson", genre: "Science Fiction", image: "./img/science fiction/Neuromancer.jpg", review: "Considered a cornerstone of cyberpunk literature, 'Neuromancer' follows a washed-up computer hacker hired for one last job in cyberspace.", price: "23.75" },
-    { id: 43, title: "Ender's Game", author: "Orson Scott Card", genre: "Science Fiction", image: "./img/science fiction/Ender'sGame.jpg", review: "In a future where gifted children are trained to fight an alien threat, Ender Wiggin emerges as a strategic genius.", price: "$26.99" },
-    { id: 44, title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", genre: "Science Fiction", image: "./img/science fiction/TheHitchhiker'sGuidetotheGalaxy.jpg", review: "An entertaining and humorous space adventure that follows Arthur Dent as he travels through space after Earth's destruction.", price: "$20.95" },
-    { id: 45, title: "Snow Crash", author: "Neal Stephenson", genre: "Science Fiction", image: "./img/science fiction/SnowCrash.jpg", review: "In a near-future America, the protagonist, Hiro Protagonist, uncovers a virtual drug and a conspiracy that threatens reality.", price: "$24.50" },
-    { id: 46, title: "Foundation", author: "Isaac Asimov", genre: "Science Fiction", image: "./img/science fiction/Foundation.jpg", review: "The first book in the Foundation series, exploring the decline and fall of a vast galactic empire and the scientific effort to shorten the ensuing dark age.", price: "$29.99" },
-    { id: 47, title: "Do Androids Dream of Electric Sheep?", author: "Philip K. Dick", genre: "Science Fiction", image: "./img/science fiction/DoAndroidsDreamofElectricSheep.jpg", review: "In a post-apocalyptic world, bounty hunter Rick Deckard hunts down androids, blurring the lines between humanity and artificial intelligence.", price: "$27.00" },
-    { id: 48, title: "The Left Hand of Darkness", author: "Ursula K. Le Guin", genre: "Science Fiction", image: "./img/science fiction/TheLeftHandofDarkness.jpg", review: "A tale set on a planet where inhabitants can change gender, exploring themes of identity, friendship, and the human condition.", price: "$22.95" },
-    { id: 49, title: "Altered Carbon", author: "Richard K. Morgan", genre: "Science Fiction", image: "./img/science fiction/AlteredCarbon.jpg", review: "In a world where consciousness can be transferred between bodies, Takeshi Kovacs investigates a wealthy man's apparent suicide.", price: "$31.50" },
-    { id: 50, title: "Hyperion", author: "Dan Simmons", genre: "Science Fiction", image: "./img/science fiction/Hyperion.jpg", review: "A frame narrative that weaves together the stories of seven pilgrims on a journey through a distant future, each revealing their connection to the enigmatic planet Hyperion.", price: "34.99" },
-    { id: 51, title: "The Girl with the Dragon Tattoo", author: "Stieg Larsson", genre: "Thriller", image: "./img/thriller/TheGirlwiththeDragonTattoo.jpg", review: "A gripping mystery that follows journalist Mikael Blomkvist and hacker Lisbeth Salander as they investigate a wealthy family's dark secrets.", price: "$25.95" },
-    { id: 52, title: "Gone Girl", author: "Gillian Flynn", genre: "Thriller", image: "./img/thriller/GoneGirl.jpg", review: "A psychological thriller that explores the complexities of marriage and deception after the disappearance of Amy Dunne on her fifth wedding anniversary.", price: "$29.50" },
-    { id: 53, title: "The Da Vinci Code", author: "Dan Brown", genre: "Thriller", image: "./img/thriller/TheDaVinciCode.jpg", review: "A code-breaking adventure that follows symbologist Robert Langdon as he unravels cryptic clues while investigating a murder at the Louvre.", price: "$28.75" },
-    { id: 54, title: "The Silence of the Lambs", author: "Thomas Harris", genre: "Thriller", image: "./img/thriller/TheSilenceoftheLambs.png", review: "FBI trainee Clarice Starling seeks the help of the brilliant but insane Dr. Hannibal Lecter to catch a serial killer known as Buffalo Bill.", price: "$26.00" },
-    { id: 55, title: "The Bourne Identity", author: "Robert Ludlum", genre: "Thriller", image: "./img/thriller/TheBourneIdentity.png", review: "A fast-paced spy thriller that follows Jason Bourne as he discovers his true identity and becomes entangled in a dangerous conspiracy.", price: "$18.99" },
-    { id: 56, title: "The Silent Patient", author: "Alex Michaelides", genre: "Thriller", image: "./img/thriller/TheSilentPatient.jpg", review: "A psychological mystery involving a woman who shoots her husband and then stops speaking, leading a criminal psychotherapist to unravel the truth.", price: "$15.50" },
-    { id: 57, title: "Sharp Objects", author: "Gillian Flynn", genre: "Thriller", image: "./img/thriller/SharpObjects.jpg", review: "Journalist Camille Preaker returns to her hometown to cover the murder of two young girls, uncovering dark secrets about her own past.", price: "$16.75" },
-    { id: 58, title: "The Reversal", author: "Michael Connelly", genre: "Thriller", image: "./img/thriller/TheReversal.jpg", review: "A legal thriller featuring defense attorney Mickey Haller, who is recruited to prosecute a high-profile case involving a convicted child molester seeking to overturn his conviction.", price: "$20.00" },
-    { id: 59, title: "Before I Go to Sleep", author: "S.J. Watson", genre: "Thriller", image: "./img/thriller/BeforeIGotoSleep.jpg", review: "A psychological thriller about a woman with amnesia who wakes up each day with no memory, piecing together the truth about her past.", price: "$22.99" },
-    { id: 60, title: "The Girl on the Train", author: "Paula Hawkins", genre: "Thriller", image: "./img/thriller/TheGirlontheTrain.png", review: "A gripping psychological thriller centered around the lives of three women and the events that unfold during their daily commutes.", price: "$14.95" },
+    { 
+        id: "horror-01", 
+        title: "The Shining by Stephen King", 
+        image: "./img/horror/theshining.jpg",
+        category: {
+            genre: "Horror",
+            id: "horror",
+        },
+        price: 19.99,
+    },
+    { 
+        id: "horror-02", 
+        title: "Dracula by Bram Stoker", 
+        image: "./img/horror/dracula.jpg",
+        category: {
+            genero: "Horror",
+            id: "horror",
+        },
+        price: 15.99,
+    },
+    { 
+        id: "horror-03", 
+        title: "Psycho by Robert Bloch", 
+        image: "./img/horror/psycho.jpg",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 14.95,
+    },
+    { 
+        id: "horror-04", 
+        title: "The Exorcist by William Peter Blatty", 
+        image: "./img/horror/theexorcist.jpg",
+        category: {
+            genero: "Horror",
+            id: "horror",
+        },
+        price: 21.50,
+    },
+    { 
+        id: "horror-05", 
+        title: "Bird Box by Josh Malerman", 
+        image: "./img/horror/birdbox.jpg",
+        category: {
+            genero: "Horror",
+            id: "horror",
+        },
+        price: 17.99,
+    },
+    { 
+        id: "horror-06", 
+        title: "The Haunting of Hill House by Shirley Jackson", 
+        image: "./img/horror/thehauntingofhillhouse.jpg",
+        category: {
+            genero: "Horror",
+            id: "horror",
+        },
+        price: 18.75,
+    },
+    { 
+        id: "horror-07", 
+        title: "American Psycho by Bret Easton Ellis", 
+        image: "./img/horror/AmericanPsycho.jpg",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 22.99,
+    },
+    { 
+        id: "horror-08", 
+        title: "It by Stephen King", 
+        image: "./img/horror/it.png",
+        category: {
+            genero: "Horror",
+            id: "horror",
+        },
+        price: 20.00,
+    },
+    { 
+        id: "horror-09", 
+        title: "House of Leaves by Mark Z. Danielewski", 
+        image: "./img/horror/houseofleaves.jpg",
+        category: {
+            genero: "Horror",
+            id: "horror",
+        },
+        price: 24.95,
+    },
+    { 
+        id: "horror-10", 
+        title: "Mexican Gothic by Silvia Moreno-Garcia", 
+        image: "./img/horror/mexicangothic.jpg",
+        category: {
+            genero: "Horror",
+            id: "horror",
+        },
+        price: 19.99,
+    },
+    { 
+        id: "romance-11", 
+        title: "Pride and Prejudice by Jane Austen", 
+        image: "./img/romance/prideandprejudice.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 12.99,
+    },
+    { 
+        id: "romance-12", 
+        title: "Outlander by Diana Gabaldon", 
+        image: "./img/romance/outlander.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 23.50,
+    },
+    { 
+        id: "romance-13", 
+        title: "The Notebook by Nicholas Sparks", 
+        image: "./img/romance/thenotebook.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 14.95,
+    },
+    { 
+        id: "romance-14", 
+        title: "Me Before You by Jojo Moyes", 
+        image: "./img/romance/mebeforeyou.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 16.99,
+    },
+    { 
+        id: "romance-15", 
+        title: "The Fault in Our Stars by John Green", 
+        image: "./img/romance/thefaultinourstars.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 13.50,
+    },
+    { 
+        id: "romance-16", 
+        title: "Gone with the Wind by Margaret Mitchell", 
+        image: "./img/romance/gonewiththewind.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 19.95,
+    },
+    { 
+        id: "romance-17", 
+        title: "Eleanor Oliphant Is Completely Fine by Gail Honeyman", 
+        image: "./img/romance/eleanoroliphantiscompletelyfine.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 22.00,
+    },
+    { 
+        id: "romance-18", 
+        title: "Sense and Sensibility by Jane Austen", 
+        image: "./img/romance/senseandsensibility.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 15.99,
+    },
+    { 
+        id: "romance-19", 
+        title: "The Hating Game by Sally Thorne", 
+        image: "./img/romance/thehatinggame.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 17.75,
+    },
+    { 
+        id: "romance-20", 
+        title: "To All the Boys I've Loved Before by Jenny Han", 
+        image: "./img/romance/ToAlltheBoysI'veLovedBefore.jpg",
+        category: {
+            genero: "Romance",
+            id: "romance",
+        },
+        price: 14.99,
+    },
+    { 
+        id: "fiction-21", 
+        title: "The Great Gatsby by F. Scott Fitzgerald", 
+        image: "./img/fiction/thegreatgatsby.webp",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 18.99,
+    },
+    { 
+        id: "fiction-22", 
+        title: "To Kill a Mockingbird by Harper Lee", 
+        image: "./img/fiction/tokillamockingbird.jpg",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 15.50,
+    },
+    { 
+        id: "fiction-23", 
+        title: "1984 by George Orwell", 
+        image: "./img/fiction/1984.jpg",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 16.75,
+    },
+    { 
+        id: "fiction-24", 
+        title: "Brave New World by Aldous Huxley", 
+        image: "./img/fiction/bravenewworld.jpg",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 20.00,
+    },
+    { 
+        id: "fiction-25", 
+        title: "One Hundred Years of Solitude by Gabriel García Márquez", 
+        image: "./img/fiction/OneHundredYearsofSolitude.jpg",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 22.99,
+    },
+    { 
+        id: "fiction-26", 
+        title: "The Catcher in the Rye by J.D. Salinger", 
+        image: "./img/fiction/TheCatcherintheRye.webp",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 14.95,
+    },
+    { 
+        id: "fiction-27", 
+        title: "The Alchemist by Paulo Coelho", 
+        image: "./img/fiction/TheAlchemist.jpg",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 19.99,
+    },
+    { 
+        id: "fiction-28", 
+        title: "Norwegian Wood by Haruki Murakami", 
+        image: "./img/fiction/NorwegianWood.jpg",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 17.50,
+    },
+    { 
+        id: "fiction-29", 
+        title: "The Kite Runner by Khaled Hosseini", 
+        image: "./img/thriller/TheKiteRunner.jpg",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 21.99,
+    },
+    { 
+        id: "fiction-30", 
+        title: "The Road by Cormac McCarthy", 
+        image: "./img/fiction/TheRoad.jpg",
+        category: {
+            genero: "Fiction",
+            id: "fiction",
+        },
+        price: 23.00,
+    },
+    { 
+        id: "fantasy-31", 
+        title: "The Hobbit by J.R.R. Tolkien", 
+        image: "./img/fantasy/TheHobbit.jpg",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 25.99,
+    },
+    { 
+        id: "fantasy-32", 
+        title: "Harry Potter and the Philosopher's Stone by J.K. Rowling", 
+        image: "./img/fantasy/HarryPotterandthePhilosopher'sStone.jpg",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 19.95,
+    },
+    { 
+        id: "fantasy-33", 
+        title: "The Name of the Wind by Patrick Rothfuss", 
+        image: "./img/fantasy/TheNameoftheWind.jpg",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 22.50,
+    },
+    { 
+        id: "fantasy-34", 
+        title: "Mistborn: The Final Empire by Brandon Sanderson", 
+        image: "./img/fantasy/MistbornTheFinalEmpire.jpg",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 24.99,
+    },
+    { 
+        id: "fantasy-35", 
+        title: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe by C.S. Lewis", 
+        image: "./img/fantasy/TheChroniclesOfNarniaThe LiontheWitchandtheWardrobe.jpg",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 18.50,
+    },
+    { 
+        id: "fantasy-36", 
+        title: "A Game of Thrones by George R.R. Martin", 
+        image: "./img/fantasy/AGameofThrones.jpg",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 27.99,
+    },
+    { 
+        id: "fantasy-37", 
+        title: "The Way of Kings by Brandon Sanderson", 
+        image: "./img/fantasy/TheWayofKings.jpg",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 30.00,
+    },
+    { 
+        id: "fantasy-38", 
+        title: "The Magicians by Lev Grossman", 
+        image: "./img/fantasy/TheMagicians.jpg",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 21.95,
+    },
+    { 
+        id: "fantasy-39", 
+        title: "Good Omens by Neil Gaiman, Terry Pratchett", 
+        image: "./img/fantasy/GoodOmens.jpg",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 25.99,
+    },
+    { 
+        id: "fantasy-40", 
+        title: "The Fellowship of the Ring by J.R.R. Tolkien", 
+        image: "./img/thriller/TheFellowshipoftheRing.gif",
+        category: {
+            genero: "Fantasy",
+            id: "fantasy",
+        },
+        price: 28.50,
+    },
+    { 
+        id: "sciencefiction-41", 
+        title: "Dune by Frank Herbert", 
+        image: "./img/science fiction/Dune.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 32.99,
+    },
+    { 
+        id: "sciencefiction-42", 
+        title: "Neuromancer by William Gibson", 
+        image: "./img/science fiction/Neuromancer.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 23.75,
+    },
+    { 
+        id: "sciencefiction-43", 
+        title: "Ender's Game by Orson Scott Card", 
+        image: "./img/science fiction/Ender'sGame.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 26.99,
+    },
+    { 
+        id: "sciencefiction-44", 
+        title: "The Hitchhiker's Guide to the Galaxy by Douglas Adams", 
+        image: "./img/science fiction/TheHitchhiker'sGuidetotheGalaxy.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 20.95,
+    },
+    { 
+        id: "sciencefiction-45", 
+        title: "Snow Crash by Neal Stephenson", 
+        image: "./img/science fiction/SnowCrash.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 24.50,
+    },
+    { 
+        id: "sciencefiction-46", 
+        title: "Foundation by Isaac Asimov", 
+        image: "./img/science fiction/Foundation.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 29.99,
+    },
+    { 
+        id: "sciencefiction-47", 
+        title: "Do Androids Dream of Electric Sheep? by Philip K. Dick", 
+        image: "./img/science fiction/DoAndroidsDreamofElectricSheep.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 27.00,
+    },
+    { 
+        id: "sciencefiction-48", 
+        title: "The Left Hand of Darkness by Ursula K. Le Guin", 
+        image: "./img/science fiction/TheLeftHandofDarkness.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 22.95,
+    },
+    { 
+        id: "sciencefiction-49", 
+        title: "Altered Carbon by Richard K. Morgan", 
+        image: "./img/science fiction/AlteredCarbon.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 31.50,
+    },
+    { 
+        id: "sciencefiction-50", 
+        title: "Hyperion by Dan Simmons", 
+        image: "./img/science fiction/Hyperion.jpg",
+        category: {
+            genero: "Science Fiction",
+            id: "sciencefiction",
+        },
+        price: 34.99,
+    },
+    { 
+        id: "thriller-51", 
+        title: "The Girl with the Dragon Tattoo by Stieg Larsson", 
+        image: "./img/thriller/TheGirlwiththeDragonTattoo.jpg",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 25.95,
+    },
+    { 
+        id: "thriller-52", 
+        title: "Gone Girl by Gillian Flynn", 
+        image: "./img/thriller/GoneGirl.jpg",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 29.50,
+    },
+    { 
+        id: "thriller-53", 
+        title: "The Da Vinci Code by Dan Brown", 
+        image: "./img/thriller/TheDaVinciCode.jpg",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 28.75,
+    },
+    { 
+        id: "thriller-54", 
+        title: "The Silence of the Lambs by Thomas Harris", 
+        image: "./img/thriller/TheSilenceoftheLambs.png",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 26.00,
+    },
+    { 
+        id: "thriller-55", 
+        title: "The Bourne Identity by Robert Ludlum", 
+        image: "./img/thriller/TheBourneIdentity.png",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 18.99,
+    },
+    { 
+        id: "thriller-56", 
+        title: "The Silent Patient by Alex Michaelides", 
+        image: "./img/thriller/TheSilentPatient.jpg",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 15.50,
+    },
+    { 
+        id: "thriller-57", 
+        title: "Sharp Objects by Gillian Flynn", 
+        image: "./img/thriller/SharpObjects.jpg",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 16.75,
+    },
+    { 
+        id: "thriller-58", 
+        title: "The Reversal by Michael Connelly", 
+        image: "./img/thriller/TheReversal.jpg",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 20.00,
+    },
+    { 
+        id: "thriller-59", 
+        title: "Before I Go to Sleep by S.J. Watson", 
+        image: "./img/thriller/BeforeIGotoSleep.jpg",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 22.99,
+    },
+    { 
+        id: "thriller-60", 
+        title: "The Girl on the Train by Paula Hawkins", 
+        image: "./img/thriller/TheGirlontheTrain.png",
+        category: {
+            genero: "Thriller",
+            id: "thriller",
+        },
+        price: 14.95,
+    },
 ]
-
-function searchBooks() {
-    let searchTerm = document.getElementById("searchInput").value.toLowerCase();
-    searchByGenre(searchTerm);
-}
-function searchByGenre(searchTerm) {
-    document.getElementById("searchResults").innerHTML = "";
-    if (searchTerm === "") {
-        alert("Please enter a keyword.");
-        return;
-    }
-    const matchingBooks = books.filter(book => book.genre.toLowerCase() === searchTerm);
-    if (matchingBooks.length === 0) {
-        alert(`There are no matches with the keyword "${searchTerm}".`);
-    } else {
-        matchingBooks.forEach(book => {
-            const div = document.createElement("div");
-            div.classList.add("book-result");
-            div.innerHTML = `
-                <img class="imagepreview" src=${book.image}>
-                <h3>Title: ${book.title}</h3> 
-                <p>Author: ${book.author}</p> 
-                <small>Review: ${book.review}</small> 
-                <p>Price: ${book.price}</p>
-            `;
-            document.getElementById("searchResults").appendChild(div);
-        });
-    }
-}
-document.getElementById("search-button").addEventListener("click", searchBooks);
-function getRandomBookById() {
-    const randomIndex = Math.floor(Math.random() * books.length);
-    return books[randomIndex];
-}
-function displayBook(book) {
-    const div = document.createElement("div");
-    div.classList.add("bookRecommendation");
-    div.innerHTML = `<img class="imagepreview" src=${book.image}>
-                <h3>Title: ${book.title}</h3> 
-                <p>Author: ${book.author}</p> 
-                <small>Review: ${book.review}</small> 
-                <p>Price: ${book.price}</p>`;
-    bookRecommendation.appendChild(div);
-}
-function generateRandomBook() {
-    const randomBook = getRandomBookById();
-    displayBook(randomBook);
-}
-generateRandomBook();
-setInterval(generateRandomBook, 24 * 60 * 60 * 1000);
-
-
-const booksContainer = document.querySelector("#books-container");
-booksContainer.innerHTML = "";
-
-function generateProductHTML(book) {
-    return `
-        <img src="${book.image}" alt="${book.title}">
-        <div class="des">
-            <span>${book.author}</span>
-            <h5>${book.title}</h5>
-            <div class="${book.image}">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-            </div>
-            <h4>$${book.price}</h4>
-        </div>
-        <a href="#"><i class="bi bi-bag-heart cart" id="${book.id}"></i></a>
-    `;
-}
-
-function loadProducts(genre) {
-    const filteredBooks = books.filter(book => book.genre === genre);
-    booksContainer.innerHTML = "";
-    filteredBooks.forEach(book => {
-        const div = document.createElement("div");
-        div.classList.add("product");
-        div.innerHTML = generateProductHTML(book);
-        booksContainer.append(div);
-    });
-}
-
-document.getElementById("fantasy").addEventListener("click", function () {
-    loadProducts("Fantasy");
-});
-
-document.getElementById("fiction").addEventListener("click", function () {
-    loadProducts("Fiction");
-});
-
-document.getElementById("horror").addEventListener("click", function () {
-    loadProducts("Horror");
-});
-
-document.getElementById("romance").addEventListener("click", function () {
-    loadProducts("Romance");
-});
-
-document.getElementById("science-fiction").addEventListener("click", function () {
-    loadProducts("Science Fiction");
-});
-
-document.getElementById("thriller").addEventListener("click", function () {
-    loadProducts("Thriller");
-});
 
