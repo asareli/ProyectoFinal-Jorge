@@ -432,6 +432,19 @@ button.normal{
     display: flex;
     align-items: center;
 }
+.boton-menu.active{
+    background-color: #CAC8B9;
+    color: #6e5e6f;
+    width: 100%;
+}
+.boton-menu.active::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+}
 .boton-menu:hover{
     background-color: #CAC8B9;
     color: #6e5e6f;
