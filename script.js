@@ -30,7 +30,7 @@ function cargarProductos(productosElegidos) {
         `;
         contenedorProductos.append(div);
     });
-    actualizarBotonesAgregar ();
+    actualizarBotonesAgregar();
 }
 
 cargarProductos(productos);
@@ -49,7 +49,7 @@ botonesCategorias.forEach(boton => {
     })
 });
 
-function actualizarBotonesAgregar () {
+function actualizarBotonesAgregar() {
     botonesAgregar = document.querySelectorAll(".producto-agregar");
     botonesAgregar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
@@ -60,18 +60,33 @@ let productosEnCarrito;
 
 let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
-if(productosEnCarritoLS) {
+if (productosEnCarritoLS) {
     productosEnCarrito = JSON.parse(productosEnCarritoLS);
     actualizarNumerito();
-}else {
+} else {
     productosEnCarrito = [];
 }
 
 
 function agregarAlCarrito(e) {
+    Toastify({
+        text: "Product added",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
+        style: {
+            background: "linear-gradient(to right,#010202, #6e5e6f)",
+            borderRadius: '1rem'
+        },
+        onClick: function () { } 
+    }).showToast();
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
-    if(productosEnCarrito.some(producto => producto.id === idBoton)){
+    if (productosEnCarrito.some(producto => producto.id === idBoton)) {
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
         productosEnCarrito[index].cantidad++;
     } else {

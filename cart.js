@@ -3,7 +3,6 @@ productosEnCarrito = JSON.parse(productosEnCarrito);
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos")
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
-const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
 let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedorTotal = document.querySelector("#total");
@@ -15,7 +14,6 @@ function cargarProductosCarrito() {
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.remove("disabled");
         contenedorCarritoAcciones.classList.remove("disabled");
-        contenedorCarritoComprado.classList.add("disabled");
         contenedorCarritoProductos.innerHTML = "";
         productosEnCarrito.forEach(producto => {
             const div = document.createElement("div");
@@ -47,7 +45,6 @@ function cargarProductosCarrito() {
         contenedorCarritoVacio.classList.remove("disabled");
         contenedorCarritoProductos.classList.add("disabled");
         contenedorCarritoAcciones.classList.add("disabled");
-        contenedorCarritoComprado.classList.add("disabled");
     }
     actualizarBotonesEliminar();
     actualizarTotal();
@@ -64,6 +61,21 @@ function actualizarBotonesEliminar() {
 }
 
 function eliminarDelCarrito(e) {
+    Toastify({
+        text: "Product deleted",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
+        style: {
+            background: "linear-gradient(to right,#010202, #6e5e6f)",
+            borderRadius: '1rem'
+        },
+        onClick: function () { } 
+    }).showToast();
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
     productosEnCarrito.splice(index, 1);
@@ -85,6 +97,7 @@ function actualizarTotal(){
 
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
+    Swal.fire("Thank you for your purchase!");
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     cargarProductosCarrito();
