@@ -99,12 +99,6 @@ button.normal{
     text-align: center;
 }
 
-#search{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#searchInput
 .single-pro-image{
     width: 40%;
     margin-right: 50px;
@@ -141,47 +135,6 @@ button.normal{
 .logo-page{
     width: 70px;
     height: 70px;
-}
-
-#coupon{
-    width: 50%;
-    margin-bottom: 30px;
-}
-
-#coupon h3,
-#subtotal h3{
-    padding-bottom: 15px;
-}
-
-#coupon input{
-    padding: 10px 20px;
-    outline: none;
-    width: 60%;
-    margin-right: 10px;
-    border: 1px solid #777c68; 
-}
-#coupon button,
-#subtotal button{
-    background-color: #6e5e6f;
-    color: #CAC8B9;
-    padding: 12px 20px;
-}
-#subtotal{
-    width: 50%;
-    margin-bottom: 30px;
-    border: 1px solid #777c68;
-    padding: 30px;
-}
-#subtotal table{
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-}
-#subtotal table td{
-    width: 50%;
-    border: 1px solid #777c68;
-    padding: 10px;
-    font-size: 13px;
 }
 #navbar{
     display: flex;
@@ -395,9 +348,12 @@ button.normal{
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
-
+.producto{
+    height: 600px;
+    gap: 200px;
+}
 .producto-imagen{
-    max-width: 100%;
+    width: 300px;
     border-radius: 1rem;
 }
 
@@ -406,11 +362,11 @@ button.normal{
     color: #010202;
     padding: .5rem;
     border-radius: 1rem;
+    max-width: 300px;
     margin-top: -2rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: .25rem;
 }
 
 .producto-titulo{
@@ -451,7 +407,7 @@ button.normal{
 }
 .numerito{
     background-color: #777c68;
-    color: #ef3636;
+    color: #CAC8B9;
     padding: .15rem .25rem;
     border-radius: .25rem;
 }
@@ -550,9 +506,9 @@ footer a:hover{
 }
 .genre-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .genre-container .genres{
     width: 23%;
